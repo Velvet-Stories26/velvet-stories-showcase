@@ -1,6 +1,8 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 export function GoldParticles({ count = 26 }: { count?: number }) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
   const dots = useMemo(
     () =>
       Array.from({ length: count }).map((_, i) => ({

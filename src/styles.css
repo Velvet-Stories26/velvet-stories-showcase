@@ -179,7 +179,7 @@
 .animate-pulse-glow { animation: pulse-glow 6s ease-in-out infinite; }
 
 .shimmer-text {
-  background: linear-gradient(90deg, oklch(0.7 0.08 82) 20%, oklch(0.96 0.06 92) 50%, oklch(0.7 0.08 82) 80%);
+  background: linear-gradient(90deg, oklch(0.6 0.1 76) 20%, oklch(0.78 0.09 88) 50%, oklch(0.6 0.1 76) 80%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;

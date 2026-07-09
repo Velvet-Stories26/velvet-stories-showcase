@@ -1,24 +1,34 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
+import { LuxeCursor } from "@/components/LuxeCursor";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { Marquee } from "@/components/Marquee";
+import { Services } from "@/components/Services";
+import { Portfolio } from "@/components/Portfolio";
+import { WhyUs } from "@/components/WhyUs";
+import { Testimonials } from "@/components/Testimonials";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  useSmoothScroll();
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="relative bg-background">
+      <LuxeCursor />
+      <Navbar />
+      <Hero />
+      <Marquee />
+      <Services />
+      <Portfolio />
+      <WhyUs />
+      <Testimonials />
+      <Contact />
+      <Footer />
+    </main>
   );
 }

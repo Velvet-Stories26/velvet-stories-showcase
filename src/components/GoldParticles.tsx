@@ -17,6 +17,8 @@ export function GoldParticles({ count = 26 }: { count?: number }) {
     [count],
   );
 
+  if (!mounted) return null;
+
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
       {dots.map((d) => (

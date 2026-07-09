@@ -43,44 +43,45 @@
 :root {
   --radius: 0.75rem;
 
-  /* Cinematic espresso + champagne gold luxury palette */
-  --background: oklch(0.17 0.018 60);
-  --foreground: oklch(0.94 0.02 85);
+  /* Light cream + champagne gold luxury palette (from reference) */
+  --background: oklch(0.95 0.012 85);
+  --foreground: oklch(0.28 0.02 55);
 
-  --card: oklch(0.21 0.02 62);
-  --card-foreground: oklch(0.94 0.02 85);
-  --popover: oklch(0.19 0.02 60);
-  --popover-foreground: oklch(0.94 0.02 85);
+  --card: oklch(0.97 0.008 85);
+  --card-foreground: oklch(0.28 0.02 55);
+  --popover: oklch(0.98 0.006 85);
+  --popover-foreground: oklch(0.28 0.02 55);
 
-  --primary: oklch(0.82 0.11 82);
-  --primary-foreground: oklch(0.19 0.02 60);
-  --secondary: oklch(0.26 0.02 62);
-  --secondary-foreground: oklch(0.94 0.02 85);
-  --muted: oklch(0.26 0.015 62);
-  --muted-foreground: oklch(0.72 0.03 82);
-  --accent: oklch(0.82 0.11 82);
-  --accent-foreground: oklch(0.19 0.02 60);
+  --primary: oklch(0.68 0.09 78);
+  --primary-foreground: oklch(0.98 0.006 85);
+  --secondary: oklch(0.9 0.015 82);
+  --secondary-foreground: oklch(0.3 0.02 55);
+  --muted: oklch(0.91 0.012 82);
+  --muted-foreground: oklch(0.48 0.025 62);
+  --accent: oklch(0.68 0.09 78);
+  --accent-foreground: oklch(0.98 0.006 85);
   --destructive: oklch(0.55 0.2 27);
   --destructive-foreground: oklch(0.96 0.02 85);
 
-  --border: oklch(0.4 0.04 82 / 0.25);
-  --input: oklch(0.4 0.04 82 / 0.3);
-  --ring: oklch(0.82 0.11 82);
+  --border: oklch(0.55 0.05 78 / 0.25);
+  --input: oklch(0.55 0.05 78 / 0.3);
+  --ring: oklch(0.68 0.09 78);
 
-  --gold: oklch(0.82 0.11 82);
-  --gold-soft: oklch(0.88 0.07 88);
-  --cream: oklch(0.95 0.025 88);
-  --espresso: oklch(0.15 0.018 60);
+  --gold: oklch(0.66 0.1 76);
+  --gold-soft: oklch(0.78 0.08 82);
+  --cream: oklch(0.32 0.02 55);
+  --espresso: oklch(0.22 0.018 55);
 
-  --gradient-gold: linear-gradient(135deg, oklch(0.9 0.09 90), oklch(0.75 0.13 78), oklch(0.88 0.07 92));
-  --gradient-dark: linear-gradient(180deg, oklch(0.17 0.018 60), oklch(0.13 0.015 58));
-  --shadow-luxe: 0 30px 80px -30px oklch(0.05 0.02 60 / 0.8);
-  --shadow-gold: 0 20px 60px -20px oklch(0.82 0.11 82 / 0.35);
+  --gradient-gold: linear-gradient(135deg, oklch(0.78 0.09 88), oklch(0.6 0.11 74), oklch(0.75 0.08 90));
+  --gradient-dark: linear-gradient(180deg, oklch(0.96 0.012 85 / 0), oklch(0.9 0.02 82 / 0.4));
+  --shadow-luxe: 0 30px 80px -30px oklch(0.4 0.03 60 / 0.35);
+  --shadow-gold: 0 20px 60px -20px oklch(0.66 0.1 76 / 0.35);
 }
 
+
 .dark {
-  --background: oklch(0.17 0.018 60);
-  --foreground: oklch(0.94 0.02 85);
+  --background: oklch(0.95 0.012 85);
+  --foreground: oklch(0.28 0.02 55);
 }
 
 @layer base {
@@ -121,15 +122,15 @@
 }
 
 @utility glass {
-  background: oklch(0.25 0.02 62 / 0.35);
+  background: oklch(0.99 0.006 85 / 0.5);
   backdrop-filter: blur(20px) saturate(140%);
-  border: 1px solid oklch(0.82 0.11 82 / 0.18);
+  border: 1px solid oklch(0.66 0.1 76 / 0.22);
 }
 
 @utility glass-strong {
-  background: oklch(0.2 0.02 62 / 0.6);
+  background: oklch(0.99 0.006 85 / 0.7);
   backdrop-filter: blur(28px) saturate(150%);
-  border: 1px solid oklch(0.82 0.11 82 / 0.22);
+  border: 1px solid oklch(0.66 0.1 76 / 0.28);
 }
 
 @utility gold-line {
@@ -178,7 +179,7 @@
 .animate-pulse-glow { animation: pulse-glow 6s ease-in-out infinite; }
 
 .shimmer-text {
-  background: linear-gradient(90deg, oklch(0.7 0.08 82) 20%, oklch(0.96 0.06 92) 50%, oklch(0.7 0.08 82) 80%);
+  background: linear-gradient(90deg, oklch(0.6 0.1 76) 20%, oklch(0.78 0.09 88) 50%, oklch(0.6 0.1 76) 80%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;

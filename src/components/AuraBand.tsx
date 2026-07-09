@@ -94,7 +94,7 @@ export function AuraBand({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-15%" }}
           transition={{ duration: 1.1, ease: EASE, delay: 0.1 }}
-          className="max-w-3xl font-serif text-3xl italic leading-tight text-espresso md:text-5xl"
+          className="max-w-3xl font-display text-4xl italic leading-tight text-espresso md:text-6xl"
         >
           {line}
         </motion.p>

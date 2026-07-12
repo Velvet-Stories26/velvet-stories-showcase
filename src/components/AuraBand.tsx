@@ -58,18 +58,23 @@ export function AuraBand({
       />
 
       {/* aura glow bloom that drifts */}
-      <motion.div
-        style={{ x: glowX }}
-        className="pointer-events-none absolute inset-0"
-      >
-        <div className="absolute left-1/2 top-1/2 h-[80%] w-[60%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(closest-side,color-mix(in_oklab,var(--color-gold)_45%,transparent),transparent)] blur-3xl animate-pulse" />
-      </motion.div>
+      {false && (
+        <motion.div
+          style={{ x: glowX }}
+          className="pointer-events-none absolute inset-0"
+        >
+          <div className="absolute left-1/2 top-1/2 h-[80%] w-[60%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(closest-side,color-mix(in_oklab,var(--color-gold)_45%,transparent),transparent)] blur-3xl animate-pulse" />
+        </motion.div>
+      )}
 
-      {/* soft fades into the cream sections above & below */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-background to-transparent" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
-      <div className="pointer-events-none absolute inset-0 bg-background/10" />
-      <div className="noise pointer-events-none absolute inset-0 opacity-40" />
+      {/* soft fades into the cream sections above & below - DISABLED */}
+      {false && (
+        <>
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-background to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
+        </>
+      )}
+      {/* Removed overlays for raw image */}
 
       {/* whispered line */}
       <motion.div

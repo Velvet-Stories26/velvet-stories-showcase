@@ -1,12 +1,12 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { SplitReveal, Reveal, EASE } from "./motion-primitives";
-import workWebsite from "@/assets/work-website.jpg";
+import workWebsite from "@/assets/work-website.png";
 import workWedding from "@/assets/work-wedding.jpg";
 import workPoster from "@/assets/work-poster.jpg";
 import workBranding from "@/assets/work-branding.jpg";
 import workPackaging from "@/assets/work-packaging.jpg";
-import workPhoto from "@/assets/work-photo.jpg";
+import workPhoto from "@/assets/work-photo.png";
 import workSurprise from "@/assets/work-surprise.jpg";
 
 type Project = {

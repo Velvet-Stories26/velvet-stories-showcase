@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg.png";
 import { GoldParticles } from "./GoldParticles";
 import { GoldButton, EASE } from "./motion-primitives";
 
@@ -38,7 +38,7 @@ export function Hero() {
       {/* background */}
       <motion.div style={{ y, scale }} className="absolute inset-0 z-0">
         <img src={heroBg} alt="" className="h-full w-full object-cover" width={1920} height={1280} />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_10%,var(--background)_92%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_75%,rgba(248,244,237,0.08)_100%)]" />
         <div className="absolute inset-0 bg-[image:var(--gradient-dark)] opacity-55" />
       </motion.div>
 
@@ -100,7 +100,7 @@ export function Hero() {
           transition={{ delay: 1.2, ease: EASE }}
           className="mx-auto mt-8 max-w-xl text-base font-light leading-relaxed text-muted-foreground md:text-lg"
         >
-          We design luxury websites, wedding invitations, branding and graphic experiences
+          We design luxury websites, wedding invitation websites, branding and graphic experiences
           for those who believe every detail deserves to be remembered.
         </motion.p>
 

@@ -1,14 +1,72 @@
 const ITEMS = [
-  "Websites",
-  "Wedding Invitations",
-  "Branding",
-  "Graphic Design",
-  "Photography Portfolios",
+  // 🌐 Website & Digital Services
+  "Custom Surprise Websites",
+  "Wedding Invitation Websites",
+  "Baby Shower Websites",
+  "Housewarming Websites",
+  "Birthday Invitation Websites",
+  "Farewell Invitation Websites",
+  "Freshers' Day Websites",
+  "School & College Event Websites",
+  "College Symposium Websites",
+  "Event Websites",
+  "Personal Portfolio Websites",
+  "Photography Portfolio Websites",
+  "Digital Visiting Cards",
+  "Business Landing Pages",
+  "RSVP Websites",
+  "Digital Wedding Albums",
+  "Wedding Countdown Pages",
+  "Couple Timeline Websites",
+  "QR Code Invitations",
+  "Feedback Websites",
+  "Customer Review Websites",
+
+  // 💍 Wedding & Invitation Design
+  "Wedding Invitation Cards",
+  "Save the Date Cards",
+  "Thank You Cards",
+  "Digital Invitation Cards",
+
+  // 📄 Business Documents & Digital Assets
   "Digital Brochures",
-  "Logo Design",
-  "Student Projects",
+  "Product Catalog PDFs",
+  "Canva Editable Templates",
+  "Habit Trackers",
+
+  // 🎓 College & Student Services
+  "College Mini Projects",
+  "Final Year Projects",
+  "React Projects",
+  "Python Projects",
+  "Django Projects",
+  "Java Projects",
+  "HTML/CSS/JavaScript Projects",
+  "Project Documentation",
+  "Project Reports",
+  "PPT Presentations",
+  "LinkedIn Profile Optimization",
+
+  // 🎨 Graphic Design
+  "Shop Posters",
+  "Festival Posters",
+  "Offer Posters",
+  "Instagram Post Designs",
+  "Reels Cover Designs",
+  "Flyers",
+  "Brochures",
+  "Menu Cards",
   "Business Cards",
-  "Packaging",
+  "Letterheads",
+  "Gift Vouchers",
+  "Banners",
+  "Standees",
+  "Packaging Labels",
+  "Product Labels",
+
+  // 🌟 Branding
+  "Logo Design",
+  "Brand Identity Kit",
 ];
 
 export function Marquee() {

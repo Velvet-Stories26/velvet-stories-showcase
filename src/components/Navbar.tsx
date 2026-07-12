@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "@/assets/velvet-logo.jpeg.asset.json";
+import logo from "@/assets/velvet-logo.jpeg";
 import { EASE } from "./motion-primitives";
 
 const LINKS = [
@@ -44,10 +44,10 @@ export function Navbar() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: EASE, delay: 0.2 }}
-        className="fixed inset-x-0 top-0 z-[100] flex justify-center px-4"
+        className="fixed inset-x-0 top-0 z-[100] flex justify-center "
       >
         <nav
-          className={`glass-strong mt-3 flex w-full max-w-6xl items-center justify-between rounded-full px-4 shadow-[var(--shadow-luxe)] transition-all duration-500 md:px-6 ${
+          className={`glass-strong  pb-4 flex w-full  items-center justify-between px-4 shadow-[var(--shadow-luxe)] transition-all duration-500 md:px-6 ${
             scrolled ? "py-1.5" : "py-2.5"
           }`}
         >
@@ -59,7 +59,7 @@ export function Navbar() {
               }`}
             >
               <img
-                src={logo.url}
+                src={logo}
                 alt="Velvet Stories Logo"
                 className="h-full w-full object-cover"
               />

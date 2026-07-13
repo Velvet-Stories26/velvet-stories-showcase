@@ -1,4 +1,4 @@
-import logo from "@/assets/velvet-logo.jpeg.asset.json";
+import logo from "@/assets/velvet-logo.jpeg";
 
 const INSTAGRAM = "https://www.instagram.com/velvet_stories_2026/";
 
@@ -21,7 +21,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col items-center gap-8 text-center">
           <span className="h-20 w-20 overflow-hidden rounded-full ring-1 ring-gold/40">
-            <img src={logo.url} alt="Velvet Stories Logo" className="h-full w-full object-cover" />
+            <img src={logo} alt="Velvet Stories Logo" className="h-full w-full object-cover" />
           </span>
           <h2 className="font-display text-5xl text-cream md:text-7xl">
             Velvet <span className="italic shimmer-text">Stories</span>

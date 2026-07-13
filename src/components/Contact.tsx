@@ -2,15 +2,67 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { SplitReveal, Reveal, Magnetic, EASE } from "./motion-primitives";
 import { GoldParticles } from "./GoldParticles";
+import { FORMSPREE_ENDPOINT } from "@/lib/formspree";
 
 const INSTAGRAM = "https://www.instagram.com/velvet_stories_2026/";
 
 export function Contact() {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
+    if (!FORMSPREE_ENDPOINT || FORMSPREE_ENDPOINT.includes("REPLACE_WITH_YOUR_FORMSPREE_ENDPOINT") || FORMSPREE_ENDPOINT.includes("REPLACE")) {
+      setError("Formspree endpoint is not configured. Please paste your Formspree URL into src/lib/formspree.ts");
+      return;
+    }
+
+    // Basic validation: ensure user pasted a Formspree endpoint (not Typeform or other URL)
+    if (!FORMSPREE_ENDPOINT.includes("formspree.io")) {
+      setError(
+        "Configured endpoint doesn't look like a Formspree endpoint. Please paste your Formspree form URL (https://formspree.io/f/xxxx) into src/lib/formspree.ts",
+      );
+      setLoading(false);
+      return;
+    }
+
+    setLoading(true);
+    setError(null);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const payload: Record<string, string> = {};
+    formData.forEach((value, key) => {
+      payload[key] = String(value);
+    });
+
+    try {
+      const resp = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      let body: any = null;
+      try {
+        body = await resp.json();
+      } catch {
+        // ignore JSON parse errors
+      }
+
+      if (resp.ok) {
+        form.reset();
+        setSent(true);
+      } else {
+        const msg = (body && (body.error || body.message)) || `Submission failed (${resp.status})`;
+        setError(msg);
+      }
+    } catch (err) {
+      setError("Network error while sending message. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -62,21 +114,28 @@ export function Contact() {
                 <Field label="Your name" name="name" />
                 <Field label="Occasion" name="occasion" />
               </div>
-              <Field label="Email or phone" name="contact" />
+              <Field label="Email or phone" name="email" />
               <div>
                 <label className="mb-2 block text-xs uppercase tracking-[0.2em] text-gold/70">
                   Tell us your story
                 </label>
                 <textarea
+                  name="message"
                   rows={4}
                   className="w-full resize-none rounded-xl border border-gold/25 bg-background/40 px-4 py-3 text-cream outline-none transition-colors placeholder:text-muted-foreground/50 focus:border-gold/60"
                   placeholder="A wedding, a surprise, a brand..."
                 />
               </div>
+
+              {error && <div className="text-sm text-red-500">{error}</div>}
+
               <Magnetic>
                 <button
                   type="submit"
-                  className="group relative w-full overflow-hidden rounded-full bg-[image:var(--gradient-gold)] py-4 text-sm uppercase tracking-[0.2em] text-espresso"
+                  disabled={loading}
+                  className={`group relative w-full overflow-hidden rounded-full bg-[image:var(--gradient-gold)] py-4 text-sm uppercase tracking-[0.2em] text-espresso ${
+                    loading ? "opacity-60 cursor-not-allowed" : ""
+                  }`}
                 >
                   <span className="relative z-10">Send your story</span>
                 </button>

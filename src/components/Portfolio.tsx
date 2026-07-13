@@ -17,13 +17,13 @@ type Project = {
 };
 
 const PROJECTS: Project[] = [
-  { title: "Aurora — Wedding Site", category: "Web Experience", image: workWebsite, span: "md:col-span-2 md:row-span-2" },
+  { title: "Anniversary surprise", category: "Web Experience", image: workWebsite, span: "md:col-span-2 md:row-span-2" },
   { title: "The Vows Suite", category: "Invitation Design", image: workWedding, span: "md:col-span-1 md:row-span-1" },
   { title: "Anniversary Surprise", category: "Surprise Website", image: workSurprise, span: "md:col-span-1 md:row-span-2" },
   { title: "Maison Identity", category: "Branding", image: workBranding, span: "md:col-span-1 md:row-span-1" },
-  { title: "Festival Series", category: "Poster Design", image: workPoster, span: "md:col-span-1 md:row-span-1" },
-  { title: "Lumière Packaging", category: "Packaging", image: workPackaging, span: "md:col-span-2 md:row-span-1" },
-  { title: "Portrait Portfolio", category: "Photography Site", image: workPhoto, span: "md:col-span-1 md:row-span-1" },
+  { title: "Coffee", category: "Poster Design", image: workPoster, span: "md:col-span-1 md:row-span-1" },
+  { title: "Visiting card", category: "Packaging", image: workPackaging, span: "md:col-span-2 md:row-span-1" },
+  { title: "Attendance management", category: "Student -Project", image: workPhoto, span: "md:col-span-1 md:row-span-1" },
 ];
 
 function TiltCard({ project }: { project: Project }) {

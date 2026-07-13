@@ -11,25 +11,25 @@ const TESTIMONIALS = [
   {
     quote:
       "The branding kit gave my little bakery a soul. It finally looks the way our cakes taste — luxurious.",
-    name: "Meera Kapoor",
+    name: "Saniya",
     role: "Brand Identity",
   },
   {
     quote:
       "I surprised my wife with an anniversary site. She cried. They understood the emotion perfectly.",
-    name: "Karthik R.",
+    name: "Jo",
     role: "Surprise Website",
   },
   {
     quote:
       "My final year project documentation and PPT looked more professional than anything in my batch.",
-    name: "Sanjay V.",
+    name: "Muneer",
     role: "Student Project",
   },
   {
     quote:
       "Every festival poster they design outperforms our ads. Elegant, bold and unmistakably premium.",
-    name: "Lakshmi Stores",
+    name: "Abisha",
     role: "Graphic Design",
   },
 ];

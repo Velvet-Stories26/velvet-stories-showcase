@@ -118,7 +118,7 @@ export function Hero() {
       </motion.div>
 
       {/* scroll cue */}
-      <motion.div
+      {/* <motion.div
         style={{ opacity }}
         className="absolute bottom-8 left-1/2 z-20 -translate-x-1/2 text-center"
       >
@@ -132,7 +132,7 @@ export function Hero() {
         <span className="mt-2 block text-[9px] uppercase tracking-[0.3em] text-muted-foreground">
           Scroll
         </span>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }

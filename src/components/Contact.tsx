@@ -137,7 +137,7 @@ export function Contact() {
                     loading ? "opacity-60 cursor-not-allowed" : ""
                   }`}
                 >
-                  <span className="relative z-10">Send your story</span>
+                  <span className="relative z-10 p-4">Send your story</span>
                 </button>
               </Magnetic>
             </form>
@@ -147,7 +147,7 @@ export function Contact() {
         <Reveal delay={0.4}>
           <div className="mt-10 flex items-center justify-center gap-3 text-sm text-muted-foreground">
             <span className="h-px w-8 bg-gold/40" />
-            Find us on
+            Find us on instgram
             <a
               href={INSTAGRAM}
               target="_blank"

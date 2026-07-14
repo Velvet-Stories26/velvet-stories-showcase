@@ -39,13 +39,27 @@ export function Navbar() {
 
   useEffect(() => {
     if (open) {
-      document.documentElement.style.overflow = "hidden";
+      // Only prevent scrolling on the document body, not the drawer
+      document.body.style.overflow = "hidden";
+
+      const handleScroll = (e: Event) => {
+        // Only prevent if the target is not the drawer
+        const target = e.target as Element;
+        if (!target.closest(".drawer-content")) {
+          (e as any).preventDefault?.();
+        }
+      };
+
+      document.addEventListener("wheel", handleScroll, { passive: false });
+      document.addEventListener("touchmove", handleScroll, { passive: false });
+
+      return () => {
+        document.removeEventListener("wheel", handleScroll);
+        document.removeEventListener("touchmove", handleScroll);
+      };
     } else {
-      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
     }
-    return () => {
-      document.documentElement.style.overflow = "";
-    };
   }, [open]);
 
   return (
@@ -151,7 +165,7 @@ export function Navbar() {
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: "100%", opacity: 0 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
-              className="fixed right-0 top-0 z-[9999] h-screen w-3/4 flex flex-col bg-gradient-to-b from-[#FAF6EF] to-[#F5EEE2] lg:hidden overflow-y-auto"
+              className="drawer-content fixed right-0 top-0 z-[9999] h-screen w-3/4 flex flex-col bg-gradient-to-b from-[#FAF6EF] to-[#F5EEE2] lg:hidden overflow-y-auto"
             >
               {/* Header with Logo and Close Button */}
               <div className="flex items-center justify-between px-6 pt-6 pb-8">

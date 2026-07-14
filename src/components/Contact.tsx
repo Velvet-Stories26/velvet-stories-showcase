@@ -84,7 +84,7 @@ export function Contact() {
                 className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-[image:var(--gradient-gold)] px-10 py-4 text-sm uppercase tracking-[0.2em] text-espresso transition-all duration-300 hover:scale-105 hover:shadow-[0_8px_24px_-4px_oklch(0.66_0.1_76/0.5)]"
               >
                 <span className="relative z-10 font-medium">
-                  Continue to Instagram
+                  Continue
                 </span>
                 <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-1">
                   →

@@ -67,9 +67,17 @@ function TiltCard({ project }: { project: Project }) {
           style={{ transform: "translateZ(40px)" }}
           className="absolute inset-x-0 bottom-0 p-6"
         >
-          <span className="text-[10px] uppercase tracking-[0.3em] text-gold">{project.category}</span>
-          <h3 className="mt-1 font-display text-2xl text-cream">{project.title}</h3>
-          <div className="mt-3 h-px w-0 bg-gold transition-all duration-500 group-hover:w-16" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent rounded-3xl" />
+
+<div className="absolute bottom-6 left-6 z-10">
+  <span className="text-[10px] uppercase tracking-[0.3em] font-semibold text-[#F07C9A] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+    {project.category}
+  </span>
+
+  <h3 className="mt-1 font-display text-2xl text-[#FFF6E8] drop-shadow-[0_3px_8px_rgba(0,0,0,0.9)]">
+    {project.title}
+  </h3>
+</div>          <div className="mt-3 h-px w-0 bg-gold transition-all duration-500 group-hover:w-16" />
         </div>
         <span className="absolute right-5 top-5 flex h-10 w-10 -rotate-45 items-center justify-center rounded-full border border-gold/40 text-gold opacity-0 transition-all duration-500 group-hover:rotate-0 group-hover:opacity-100">
           ↗

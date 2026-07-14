@@ -26,10 +26,11 @@ const REASONS = [
 ];
 
 const STATS = [
-  { value: 5, suffix: "+", label: "Projects delivered" },
-  { value: 10, suffix: "+", label: "Service offerings" },
-  { value: 100, suffix: "%", label: "Handcrafted design" },
-  { value: 5, suffix: "★", label: "Client experience" },
+  { value: 10, suffix: "+", label: "Service Offerings" },
+  { value: 100, suffix: "%", label: "Custom Designs" },
+  { value: 24, suffix: "/7", label: "Client Support" },
+  { value: 5, suffix: "★", label: "Premium Quality" },
+
 ];
 
 function Counter({ value, suffix }: { value: number; suffix: string }) {

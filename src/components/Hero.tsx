@@ -37,7 +37,14 @@ export function Hero() {
     >
       {/* background */}
       <motion.div style={{ y, scale }} className="absolute inset-0 z-0">
-        <img src={heroBg} alt="" className="h-full w-full object-cover" width={1920} height={1280} />
+        <img 
+          src={heroBg} 
+          alt="Premium cinematic background for Velvet Stories - custom surprise website and digital creative studio" 
+          className="h-full w-full object-cover" 
+          width={1920} 
+          height={1280}
+          loading="eager"
+        />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_75%,rgba(248,244,237,0.08)_100%)]" />
         <div className="absolute inset-0 bg-[image:var(--gradient-dark)] opacity-55" />
       </motion.div>
@@ -100,8 +107,7 @@ export function Hero() {
           transition={{ delay: 1.2, ease: EASE }}
           className="mx-auto mt-8 max-w-xl text-base font-light leading-relaxed text-muted-foreground md:text-lg"
         >
-          We design luxury websites, wedding invitation websites, branding and graphic experiences
-          for those who believe every detail deserves to be remembered.
+          We create custom surprise websites, personalized anniversary websites, proposal websites, wedding invitations and premium digital experiences. From birthday poster design to photo editing and creative digital invitations — every moment deserves luxury.
         </motion.p>
 
         <motion.div

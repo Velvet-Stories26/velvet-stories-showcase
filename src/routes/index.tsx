@@ -1,13 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
-import { LuxeCursor } from "@/components/LuxeCursor";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
 import { Services } from "@/components/Services";
 import { Portfolio } from "@/components/Portfolio";
 import { WhyUs } from "@/components/WhyUs";
-import { Testimonials } from "@/components/Testimonials";
+// import { Testimonials } from "@/components/Testimonials";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { AuraBand } from "@/components/AuraBand";
@@ -20,7 +19,6 @@ function Index() {
   useSmoothScroll();
   return (
     <main className="relative bg-background">
-      <LuxeCursor />
       <Navbar />
       <Hero />
       <Marquee />
@@ -38,7 +36,7 @@ function Index() {
         align="left"
       />
       <WhyUs />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <AuraBand
         image="glow"
         eyebrow="Your story, next"

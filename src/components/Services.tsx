@@ -106,7 +106,7 @@ function ServiceRow({ service, index }: { service: Service; index: number }) {
           <motion.img
             style={{ y: imgY }}
             src={service.image}
-            alt={service.title}
+            alt={`${service.title} - Velvet Stories portfolio example showing ${service.tags[0]}`}
             loading="lazy"
             className="absolute inset-0 h-[120%] w-full object-cover transition-transform duration-700 group-hover:scale-105"
           />

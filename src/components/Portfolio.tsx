@@ -55,7 +55,7 @@ function TiltCard({ project }: { project: Project }) {
       >
         <img
           src={project.image}
-          alt={project.title}
+          alt={`${project.title} - Velvet Stories ${project.category} portfolio piece showcasing premium design and creative work`}
           loading="lazy"
           className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110"
         />

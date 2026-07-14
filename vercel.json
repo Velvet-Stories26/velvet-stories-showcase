@@ -3,7 +3,6 @@
   "devCommand": "npm run dev",
   "installCommand": "npm ci",
   "framework": "vite",
-  "nodeVersion": "18.x",
   "env": {
     "VITE_MODE": {
       "value": "production"

@@ -102,7 +102,7 @@ function ServiceRow({ service, index }: { service: Service; index: number }) {
     >
       {/* image */}
       <Reveal y={60} className="[direction:ltr]">
-        <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-gold/20 shadow-[var(--shadow-luxe)]">
+        <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-gold/30 shadow-[0_4px_12px_0_oklch(0.66_0.1_76/0.35),0_12px_28px_-4px_oklch(0.66_0.1_76/0.4),0_24px_50px_-8px_oklch(0.66_0.1_76/0.3)] hover:shadow-[0_6px_16px_0_oklch(0.66_0.1_76/0.5),0_16px_36px_-4px_oklch(0.66_0.1_76/0.5),0_32px_64px_-8px_oklch(0.66_0.1_76/0.35)] transition-shadow duration-500">
           <motion.img
             style={{ y: imgY }}
             src={service.image}
@@ -110,7 +110,7 @@ function ServiceRow({ service, index }: { service: Service; index: number }) {
             loading="lazy"
             className="absolute inset-0 h-[120%] w-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+
           <span className="absolute left-5 top-4 font-display text-6xl text-cream/30">
             {service.num}
           </span>

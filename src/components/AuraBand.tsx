@@ -1,8 +1,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { EASE } from "@/components/motion-primitives";
-import auraSilk from "@/assets/aura-silk.jpg";
-import auraGlow from "@/assets/aura-glow.jpg";
+import auraSilk from "@/assets/aura-silk2.png";
+import auraGlow from "@/assets/aura-glow2.png";
 
 const IMAGES = {
   silk: auraSilk,

@@ -26,7 +26,7 @@ const REASONS = [
 ];
 
 const STATS = [
-  { value: 10, suffix: "+", label: "Projects delivered" },
+  { value: 5, suffix: "+", label: "Projects delivered" },
   { value: 10, suffix: "+", label: "Service offerings" },
   { value: 100, suffix: "%", label: "Handcrafted design" },
   { value: 5, suffix: "★", label: "Client experience" },

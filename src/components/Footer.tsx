@@ -40,9 +40,9 @@ export function Footer() {
       />
 
       {/* moving divider */}
-      <div className="absolute left-0 top-0 h-px w-full overflow-hidden">
+      {/* <div className="absolute left-0 top-0 h-px w-full overflow-hidden">
         <div className="gold-line animate-marquee h-full w-[200%]" />
-      </div>
+      </div> */}
 
       <div className="relative z-10 mx-auto max-w-6xl px-6">
         <div className="flex flex-col items-center gap-8 text-center">

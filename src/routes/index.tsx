@@ -7,7 +7,7 @@ import { Marquee } from "@/components/Marquee";
 import { Services } from "@/components/Services";
 import { Portfolio } from "@/components/Portfolio";
 import { WhyUs } from "@/components/WhyUs";
-import { Testimonials } from "@/components/Testimonials";
+// import { Testimonials } from "@/components/Testimonials";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { AuraBand } from "@/components/AuraBand";
@@ -38,7 +38,7 @@ function Index() {
         align="left"
       />
       <WhyUs />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <AuraBand
         image="glow"
         eyebrow="Your story, next"

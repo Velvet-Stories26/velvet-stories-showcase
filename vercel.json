@@ -3,11 +3,6 @@
   "devCommand": "npm run dev",
   "installCommand": "npm ci",
   "framework": "vite",
-  "env": {
-    "VITE_MODE": {
-      "value": "production"
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",

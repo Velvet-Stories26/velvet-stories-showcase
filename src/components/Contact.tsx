@@ -133,7 +133,7 @@ export function Contact() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className={`group relative w-full overflow-hidden rounded-full bg-[image:var(--gradient-gold)] py-4 text-sm uppercase tracking-[0.2em] text-espresso ${
+                  className={`group relative w-full overflow-hidden rounded-full p-3 bg-[image:var(--gradient-gold)] py-4 text-sm uppercase tracking-[0.2em] text-espresso ${
                     loading ? "opacity-60 cursor-not-allowed" : ""
                   }`}
                 >

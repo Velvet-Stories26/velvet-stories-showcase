@@ -1,4 +1,7 @@
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import logo from "@/assets/velvet-logo.jpeg";
+import auraSilk from "@/assets/aura-silk2.png";
 
 const INSTAGRAM = "https://www.instagram.com/velvet_stories_2026/";
 
@@ -11,14 +14,37 @@ const LINKS = [
 ];
 
 export function Footer() {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["-14%", "14%"]);
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.15, 1, 1.15]);
+
   return (
-    <footer className="relative overflow-hidden border-t border-gold/15 pt-20">
+    <footer
+      ref={ref}
+      className="relative overflow-hidden border-t border-gold/15 pt-20"
+    >
+      {/* Parallax moving background image — matches AuraBand sections */}
+      <motion.img
+        src={auraSilk}
+        alt=""
+        loading="lazy"
+        width={1920}
+        height={912}
+        style={{ y, scale }}
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+      />
+
       {/* moving divider */}
       <div className="absolute left-0 top-0 h-px w-full overflow-hidden">
         <div className="gold-line animate-marquee h-full w-[200%]" />
       </div>
 
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="relative z-10 mx-auto max-w-6xl px-6">
         <div className="flex flex-col items-center gap-8 text-center">
           <span className="h-20 w-20 overflow-hidden rounded-full ring-1 ring-gold/40">
             <img src={logo} alt="Velvet Stories Logo" className="h-full w-full object-cover" />

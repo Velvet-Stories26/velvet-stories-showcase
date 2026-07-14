@@ -51,7 +51,7 @@ function TiltCard({ project }: { project: Project }) {
         onMouseMove={onMove}
         onMouseLeave={reset}
         style={{ rotateX: rx, rotateY: ry, transformPerspective: 1000 }}
-        className="group relative h-full min-h-[16rem] overflow-hidden rounded-2xl border border-gold/20 shadow-[var(--shadow-luxe)]"
+        className="group relative h-full min-h-[16rem] overflow-hidden rounded-2xl border border-gold/30 shadow-[0_4px_12px_0_oklch(0.66_0.1_76/0.35),0_12px_28px_-4px_oklch(0.66_0.1_76/0.4),0_24px_50px_-8px_oklch(0.66_0.1_76/0.3)] hover:shadow-[0_6px_16px_0_oklch(0.66_0.1_76/0.5),0_16px_36px_-4px_oklch(0.66_0.1_76/0.5),0_32px_64px_-8px_oklch(0.66_0.1_76/0.35)] transition-shadow duration-500"
       >
         <img
           src={project.image}

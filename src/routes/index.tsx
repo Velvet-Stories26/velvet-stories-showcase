@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
-import { LuxeCursor } from "@/components/LuxeCursor";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
@@ -20,7 +19,6 @@ function Index() {
   useSmoothScroll();
   return (
     <main className="relative bg-background">
-      <LuxeCursor />
       <Navbar />
       <Hero />
       <Marquee />

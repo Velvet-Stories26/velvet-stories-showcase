@@ -1,2 +1,25 @@
+# Robots.txt for Velvet Stories
+# This file tells search engines how to crawl and index our website
+
+# Allow all robots to crawl the site
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*?*sort=
+Disallow: /search?
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://velvetstories.com/sitemap.xml

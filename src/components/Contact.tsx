@@ -276,12 +276,12 @@ export function Contact() {
                     value={formData.email}
                     onChange={handleInputChange}
                     error={validationErrors.email}
-                    placeholder="optional"
+                    placeholder="Enter your email"
                   />
                 </div>
                 <div>
                   <Field
-                    label="Phone Number"
+                    label="Phone Number(optional)"
                     name="phone"
                     type="tel"
                     value={formData.phone}

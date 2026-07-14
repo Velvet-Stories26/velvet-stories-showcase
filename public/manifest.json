@@ -1,0 +1,84 @@
+{
+  "name": "Velvet Stories - Cinematic Creative Studio",
+  "short_name": "Velvet Stories",
+  "description": "Premium creative studio crafting cinematic websites, surprise websites, luxury invitations, branding and graphic design. Moments that last forever.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#1a1410",
+  "background_color": "#1a1410",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "192x192",
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-1.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/screenshot-2.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "categories": [
+    "business",
+    "design",
+    "graphics"
+  ],
+  "shortcuts": [
+    {
+      "name": "View Portfolio",
+      "short_name": "Portfolio",
+      "description": "View our creative portfolio",
+      "url": "/#portfolio",
+      "icons": [
+        {
+          "src": "/favicon.ico",
+          "sizes": "192x192",
+          "type": "image/x-icon"
+        }
+      ]
+    },
+    {
+      "name": "Get in Touch",
+      "short_name": "Contact",
+      "description": "Contact us for your creative project",
+      "url": "/#contact",
+      "icons": [
+        {
+          "src": "/favicon.ico",
+          "sizes": "192x192",
+          "type": "image/x-icon"
+        }
+      ]
+    }
+  ]
+}
